@@ -1,0 +1,261 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body class = "animate">    
+    <header>
+         <style type="text/css">
+            
+            .animate {
+                background: linear-gradient(270deg, #00ffff, #ff7bac);
+                -webkit-animation: GradientAnimation 10s ease infinite;
+                -moz-animation: GradientAnimation 10s ease infinite;
+                animation-name: GradientAnimation 10s ease infinite; 
+             }
+
+            .static-gradient{
+                background: #ff7bac; /* For browsers that do not support gradients */
+                background: -webkit-linear-gradient(right, #00ffff , #ff7bac); /* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(right, #00ffff , #ff7bac); /* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(right, #00ffff , #ff7bac); /* For Firefox 3.6 to 15 */
+                background: linear-gradient(to right, #00ffff , #ff7bac); /* Standard syntax */
+            }
+            .animate-button:hover{
+                background: linear-gradient(270deg, #00ffff, #ff7bac);
+                background-size: 400% 400%;
+
+                -webkit-animation: GradientAnimation 5s ease infinite;
+                -moz-animation: GradientAnimation 5s ease infinite;
+                animation: GradientAnimation 5s ease infinite;
+            }
+             
+            @-webkit-keyframes GradientAnimation {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+                }
+            @-moz-keyframes GradientAnimation {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+                }
+            @keyframes GradientAnimation {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+                }
+             
+            ::-moz-selection { /* Code for Firefox */
+                background: #00ffff;
+            }
+
+            ::selection {
+                background: #00ffff;
+            }    
+             
+             @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+
+
+
+            h1 {
+            color: hsla(0, 0%, 0%, .9);
+            font: normal 100px Varela Round, sans-serif;
+            height: 100px;
+            letter-spacing: 5px;
+            text-align: center;
+            text-transform: uppercase;
+            animation: move linear 2000ms infinite;  
+            }
+
+            @keyframes move {
+            0% {
+                text-shadow:
+                4px -4px 0 hsla(0, 100%, 50%, 1), 
+                3px -3px 0 hsla(0, 100%, 50%, 1), 
+                2px -2px 0 hsla(0, 100%, 50%, 1), 
+                1px -1px 0 hsla(0, 100%, 50%, 1),
+                -4px 4px 0 hsla(180, 100%, 50%, 1), 
+                -3px 3px 0 hsla(180, 100%, 50%, 1), 
+                -2px 2px 0 hsla(180, 100%, 50%, 1), 
+                -1px 1px 0 hsla(180, 100%, 50%, 1)
+                ;
+            }
+            25% {    
+                text-shadow:      
+                -4px -4px 0 hsla(180, 100%, 50%, 1), 
+                -3px -3px 0 hsla(180, 100%, 50%, 1), 
+                -2px -2px 0 hsla(180, 100%, 50%, 1), 
+                -1px -1px 0 hsla(180, 100%, 50%, 1),
+                4px 4px 0 hsla(0, 100%, 50%, 1), 
+                3px 3px 0 hsla(0, 100%, 50%, 1), 
+                2px 2px 0 hsla(0, 100%, 50%, 1), 
+                1px 1px 0 hsla(0, 100%, 50%, 1)      
+                ;
+            }
+            50% {
+                text-shadow:
+                -4px 4px 0 hsla(0, 100%, 50%, 1), 
+                -3px 3px 0 hsla(0, 100%, 50%, 1), 
+                -2px 2px 0 hsla(0, 100%, 50%, 1), 
+                -1px 1px 0 hsla(0, 100%, 50%, 1),
+                4px -4px 0 hsla(180, 100%, 50%, 1), 
+                3px -3px 0 hsla(180, 100%, 50%, 1), 
+                2px -2px 0 hsla(180, 100%, 50%, 1), 
+                1px -1px 0 hsla(180, 100%, 50%, 1)
+                ;
+            }
+            75% {
+                text-shadow:
+                4px 4px 0 hsla(180, 100%, 50%, 1), 
+                3px 3px 0 hsla(180, 100%, 50%, 1), 
+                2px 2px 0 hsla(180, 100%, 50%, 1), 
+                1px 1px 0 hsla(180, 100%, 50%, 1),
+                -4px -4px 0 hsla(0, 100%, 50%, 1), 
+                -3px -3px 0 hsla(0, 100%, 50%, 1), 
+                -2px -2px 0 hsla(0, 100%, 50%, 1), 
+                -1px -1px 0 hsla(0, 100%, 50%, 1)      
+                ;
+            }
+            100% {
+                text-shadow:
+                4px -4px 0 hsla(0, 100%, 50%, 1), 
+                3px -3px 0 hsla(0, 100%, 50%, 1), 
+                2px -2px 0 hsla(0, 100%, 50%, 1), 
+                1px -1px 0 hsla(0, 100%, 50%, 1),
+                -4px 4px 0 hsla(180, 100%, 50%, 1), 
+                -3px 3px 0 hsla(180, 100%, 50%, 1), 
+                -2px 2px 0 hsla(180, 100%, 50%, 1), 
+                -1px 1px 0 hsla(180, 100%, 50%, 1)
+                ;
+            }  
+            }
+        </style>
+    </header>
+</body>
+
+<div class="text-center">
+    <style type="text/css">
+        /* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#GoogleMLEngine {background-color: red;}
+#AWSSagemaker {background-color: green;}
+#GoogleComputeEngine {background-color: blue;}
+#AWSEC2 {background-color: orange;}
+
+    </style>
+    <script>
+        function openPage(pageName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+
+    // Show the specific tab content
+    document.getElementById(pageName).style.display = "block";
+
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+    </script>
+</div>
+
+<body class = "animate">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="text-center">
+                    <h1>Cloud and Frameworks</h1>
+                    <br> <br> <br> <br> <br> <br> <br> <br>
+                    <p class="lead">Learning Machine Learning, one layer at a time </p>
+                </div>
+                <br> <br> <br>
+                <button class="tablink" onclick="openPage('GoogleMLEngine', this, 'red')">Google ML Engine</button>
+                <button class="tablink" onclick="openPage('AWSSagemaker', this, 'green')" id="defaultOpen">AWS Sagemaker</button>
+                <button class="tablink" onclick="openPage('GoogleComputeEngine', this, 'blue')">Google Compute Engine</button>
+                <button class="tablink" onclick="openPage('AWSEC2', this, 'orange')">AWS EC2</button>
+               
+
+                <div id="GoogleMLEngine" class="tabcontent">
+                <h3>Google ML Engine</h3>
+                <p>API CALLS
+                        <br> <br> <br> <br> <br>
+                        Get Model {{ mlengine_model }} 
+                        <br> <br> <br> <br> <br>
+                        Get Single Training Job {{ mlengine_job_single }}
+                        <br> <br> <br> <br> <br>
+                        Get Distributed Training Job {{ mlengine_job_distribtued }}
+                        <br> <br> <br> <br> <br>
+                        Get HyperParamater Training Job {{ mlengine_hyperparam }}
+                        <br> <br> <br> <br> <br>
+                        Get Prediction Job {{ mlengnine_predict }}
+                </p>
+                </div>
+
+                <div id="AWSSagemaker" class="tabcontent">
+                <h3>AWS Sagemaker</h3>
+                <p>API CALLS
+                    <br> <br> <br> <br> <br>
+                    Get Model {{ sage_model }}
+                    <br> <br> <br> <br> <br>
+                    Get Job {{ sage_job }}
+                    <br> <br> <br> <br> <br>
+                    Get Job Descriptions {{ sage_job_description }}
+
+
+
+                </p> 
+                </div>
+
+                <div id="GoogleComputeEngine" class="tabcontent">
+                <h3>Google Compute Engine</h3>
+                <p>API CALLS</p>
+                </div>
+                
+                <div id="AWSEC2" class="tabcontent">
+                <h3>AWS EC2</h3>
+                <p>API CALLS</p>
+                </div>
+
+
+                <br> <br> <br> <br> <br>
+            </div>
+        </div>
+    </div>
+</body>
+    
+{% endblock %}

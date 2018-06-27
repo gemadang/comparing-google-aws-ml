@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "baeri-test-project",
+  "private_key_id": "77e8c8183336f35c0da7d174e493037cf375789d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCR1xoeyJLEOQq6\nZG/bhsQWSUDbp9+yEYuz9XKw1TEPDjg1+qjh/RQuPowZcIkF3QLJ2k4NrNulOn4u\nxZeZX9qNlI2smhdgwwbCGHKlUjhs2D2e1OkxJHs4mjh9P7kV35k9u6qp8fL85Nzo\nzluQ2KCkDSNXQc3CsWiwtkP/9V0HRuliFWDiJWIqJG/46WKxCyDVspfbNC5U3SI7\nXMwoJzZ77WnPukLOTS9+aAVOum4+lnpSKPUMe19MdEo1MjRekHb2NqnBF/zZOodc\nJW62FvNJvrxOQUXwwQqTGrQbXetEICfqxDj0TwYv/AQXPrmeXEg/kZNQjaqr7MaJ\nPd5Tc7f7AgMBAAECggEARMXz6lpZY7Emjvk4CoTFyWCn9i12/qjpgWaYvCz84oWp\nGkNnCpLmxlv2gzSfWSV84CVTM321Ynhv8qx5LfmWvbc1DBTqO1YcxMD0p2NbenCK\ntnDeuq7icLHBO8cmB9uWjxcFhviyxnFCf4J4iZiuQE51wPsmBc7VeKeq73QMd5ZR\nkUedEMRfNgTiZUs1ktYd+raw5OyiAV1fI/HhRwlFnI+gL4rlxVudguQpy4jn2kWF\n4Bj5hpHmTlWhlRxVrZTj5eIXOHNBMLxCmZXSvKs5hw2K2cG9Vc84nTook+VnbmTJ\n2Qby1YWCkgiCwKq25B3CF3ZGmErLZVFQuXtDn4OoGQKBgQDLomT3h2kDPhR2rzyo\nf6yrTtNpIt415L15pd05mWJYbl3KGYuTvBh/bd6YoZkLpFfG3W/Q2fATdTxtjVnP\nu8Hu/Af82r0/nvMZvI0tdY9VZdZLyRNDQa3kOGZUYOhVQLPwZtUFS5WmVI75hc1s\nyjZayYKcsJq4s+EP5T+TVoJndQKBgQC3WAUudtiiVGAFh300zdiM5VbIPYu/SD54\nAdh+VIgk89BpLAngvq47XPiMsb8sYsi8NNetZEZBNgoUet3pYQGxrZO7jHu+UBgJ\nK9rZ5Ti7Wily50R3VcypldVvTx9ef9abg8MaE228zRyJRTKl09YXCLKC5nq2qJOk\n/YEe8EIjrwKBgQCTHKT4tljFQOojvAGEcYha0j2lLM1//dpssckavZbw7/rN8JqH\nhlHkbYlslwIsCPRo9Ly9E1V/mSiotH93tdsrPeS/ZX9nIPvbUf5kIxQDy+h/I6rI\n4gAwahZzSvdN78qPGJs4khxw55HK7kE0IPoXqJC1hligq0Mi6ql9VfgrqQKBgEqb\nsfgXes6MAUseuI+9WGr1hJwVl4Gud2VEcwHtij1nTh8OQbLIRYR4r9gpGL+KL1+P\nLVks3f35bJ6q5RTsWdEg7mY6o7xtQWqyAuv6gFyVMxrEC7N4IcG87E7QZtaAtScx\ntjotP9G9segWVabvjkZvTp1ABx2/ed2BH4Mkh/WXAoGBAKIRFLYJ9+LHWtXpGnEi\nEPvt0crnY7HEh1YPw3qzInJNEGhkor7eb/LVhS95RSIHU0DfKQrSFM5e2Tjvs13x\nkQc8YCO0vwZZx77U7DZBrZnB48eZt6JKEbM4Nvang62DUXC3GBSlPjIWzDhcD3xd\n8/i1+93Yn7xM28BT1Axm+1Q9\n-----END PRIVATE KEY-----\n",
+  "client_email": "testing-gce-baeri@baeri-test-project.iam.gserviceaccount.com",
+  "client_id": "111808038329475460768",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/testing-gce-baeri%40baeri-test-project.iam.gserviceaccount.com"
+}
