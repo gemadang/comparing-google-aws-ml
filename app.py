@@ -88,7 +88,7 @@ def invoke_sagemaker_endpoint(test):
 
 def get_sagemaker_models(test):
     if test:
-        return "test"
+        return ("test", "test")
 
     response = client.list_models(
         SortBy='CreationTime',
@@ -99,12 +99,22 @@ def get_sagemaker_models(test):
         #CreationTimeBefore=datetime(2015, 1, 1),
         #CreationTimeAfter=datetime(2015, 1, 1)
     )
+
+    description_list = []
+
+    for model in response["Models"]:
+        description = client.describe_model(
+            ModelName= model["ModelName"]
+        )
+        print(description)
+        description_list.append(description)
     
-    return response
+    return (response, description_list)
+    
 
 def get_sagemaker_jobs(test):
     if test:
-        return "test"
+        return ("test", "test")
     
     response = client.list_training_jobs(
         #NextToken='ListTrainingJobs',
@@ -129,6 +139,37 @@ def get_sagemaker_jobs(test):
     
     return (response, description_list)
 
+def get_sagemaker_hyper_paramater(test):
+
+    if test:
+        return ("test", "test")
+
+
+    response = client.list_hyper_parameter_tuning_jobs(
+        #NextToken='string',
+        MaxResults=10,
+        SortBy='Status',
+        SortOrder='Descending',
+        #NameContains='string',
+        #CreationTimeAfter=datetime(2015, 1, 1),
+        #CreationTimeBefore=datetime(2015, 1, 1),
+        #LastModifiedTimeAfter=datetime(2015, 1, 1),
+        #LastModifiedTimeBefore=datetime(2015, 1, 1),
+        #StatusEquals='Completed'|'InProgress'|'Failed'|'Stopped'|'Stopping'
+    )
+
+    description_list = []
+
+    for job in response["HyperParameterTuningJobSummaries"]:
+        description = client.describe_hyper_parameter_tuning_job(
+            HyperParameterTuningJobName=job["HyperParameterTuningJobName"]
+        )
+
+        description_list.append(description)
+    
+    return (response, description_list)
+
+
 
 
 #################################### AWS EC2 ####################################
@@ -144,13 +185,11 @@ def main():
     '''
     dont_call_api = True
 
-    sage_model = get_sagemaker_models(dont_call_api)
-    (sage_job, sage_job_description) = get_sagemaker_jobs(not dont_call_api)
-    
- 
-    print(json.dumps(sage_job, indent=1,sort_keys=True, default=str))
-    print()
-    print(json.dumps(sage_model, indent=1,sort_keys=True, default=str))
+    (sage_model, sage_model_description) = get_sagemaker_models(dont_call_api)
+    (sage_job, sage_job_description) = get_sagemaker_jobs(dont_call_api)
+    (sage_hyperparameter_job, sage_hyperparameter_description) = get_sagemaker_hyper_paramater(dont_call_api)
+
+    #print(json.dumps(sage_hyperparameter_job, indent=1, sort_keys=True, default=str))
 
     mlengine_model = get_mlengine_model(dont_call_api)
     mlengine_job_single = get_mlengine_job(dont_call_api, 'census_single_2')
@@ -159,13 +198,16 @@ def main():
     mlengine_predict = get_mlengine_job(dont_call_api, 'census_prediction_1')
 
     return render_template('index.html', sage_model=sage_model,
+                            sage_model_description=sage_model_description,
                             sage_job=sage_job,
                             sage_job_description=sage_job_description,
+                            sage_hyperparameter_job=sage_hyperparameter_job,
+                            sage_hyperparameter_description=sage_hyperparameter_description,
                             mlengine_model=mlengine_model, 
                             mlengine_job_single=mlengine_job_single,
                             mlengine_job_distributed=mlengine_job_distributed,
-                            mlengine_hyperparam = mlengine_hyperparam,
-                            mlengine_predict = mlengine_predict
+                            mlengine_hyperparam=mlengine_hyperparam,
+                            mlengine_predict=mlengine_predict
                         )
 
 
